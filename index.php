@@ -1,5 +1,6 @@
 <?php
-    require 'scales.php';
+require 'includes/helpers.php';
+require 'scales.php';
 ?>
 
 <!DOCTYPE html>
@@ -7,8 +8,7 @@
 <head>
     <title>Nathan Hunt</title>
     <meta charset="utf-8">
-
-    <link href='/p2/local.css' rel='stylesheet'>
+    <link href='./local.css' rel='stylesheet'>
 
 </head>
 <body>
@@ -28,7 +28,7 @@
                     Root note: <input type="text" name="root" value="C" size="4" maxlength="1">
                 </label>
                 <input type="radio" name="root_opts" value="nat" checked>♮
-                <input type="radio" name="root_opts" value="flat">♯
+                <input type="radio" name="root_opts" value="sharp">♯
                 <input type="radio" name="root_opts" value="flat">♭<br>
                 <br>
                 <!-- <input type="checkbox" name="display_opts" value="solfege">Solfege<br> -->
@@ -38,11 +38,26 @@
                 </select>
                 <br>
                 <input type="submit" value="Submit" id="submit-button">
+                <?php if ($hasErrors): ?> <!-- TODO update this section -->
+                    <div class='errors alert alert-danger'>
+                        <ul>
+                            <?php foreach ($errors as $error): ?>
+                                <li><?= $error ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                <?php endif ?>
             </form>
         </section>
 
+        <!-- TODO provide fail message -->
+
         <section id="piano-section">
-            <?php echo $piano->builtPiano  ?>
+            <?php if (isset($_SESSION['piano'])): ?>
+                <b>highlighted</b><br>
+                <?php echo $_SESSION['piano'];  ?>
+            <?php endif; ?>
+            <!-- TODO define default behavior better -->
         </section>
     </div>
 </body>

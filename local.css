@@ -62,28 +62,32 @@ h2 {
   font-weight: bold;
 }
 
+#piano-section {
+  position: relative;
+}
+
 #piano {
-  width: 650px;
+  width: 66%;
   margin-top: 4em;
-  margin-left: 42%;
+  margin-left: 29%;
   margin-right: auto;
   display: flex;
 }
 
 .whitekey {
-  width: 25px;
-  height: 75px;
+  width: 4%;
+  height: 5.5em;
   background-color: white;
   border-color: black;
   border-style: solid;
-  margin-left: -8px;
+  margin-left: -4px;
   margin-top: 25px;
   z-index: 1;
 }
 
 .blackkey {
-  width: 18px;
-  height: 75px;
+  width: 3%;
+  height: 4.5em;
   background-color: black;
   border-color: black;
   border-style: solid;
@@ -91,10 +95,18 @@ h2 {
   margin-left: -16px;
 }
 
-.highlighted {
+.highlighted.whitekey {
+  background-color: rgba(63, 63, 191, 0.6);
+}
 
-} /* TODO do the CSS here */
+.highlighted-root.whitekey {
+  background-color: rgba(63, 191, 63, 0.6);
+}
 
-.highlighted-root {
+.highlighted.blackkey {
+  background-color: hsl(240, 50%, 35%);
+}
 
+.highlighted-root.blackkey {
+  background-color: hsl(120, 50%, 22%);
 }
