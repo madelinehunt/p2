@@ -26,29 +26,6 @@ h1 {
   padding-top: 2%;
 }
 
-#photos img {
-  max-height: 300px;
-  border-radius: 3%;
-  border-style: solid;
-  border-width: medium;
-  border-color: black;
-}
-
-#about-me {
-  font-family: serif;
-  width: 66%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-h2 {
-  font-size: 22px;
-}
-
-#attribution b {
-  font-size: 24px;
-}
-
 #scales_title {
   margin-bottom: 70px;
 }
@@ -109,4 +86,9 @@ h2 {
 
 .highlighted-root.blackkey {
   background-color: hsl(120, 50%, 22%);
+}
+
+#errors{
+  margin-top: 2%;
+  color: red;
 }

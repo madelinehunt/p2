@@ -1,6 +1,6 @@
 <?php
 require 'includes/helpers.php';
-require 'scales.php';
+require 'logic.php'
 ?>
 
 <!DOCTYPE html>
@@ -38,26 +38,26 @@ require 'scales.php';
                 </select>
                 <br>
                 <input type="submit" value="Submit" id="submit-button">
-                <?php if ($hasErrors): ?> <!-- TODO update this section -->
-                    <div class='errors alert alert-danger'>
-                        <ul>
-                            <?php foreach ($errors as $error): ?>
-                                <li><?= $error ?></li>
-                            <?php endforeach; ?>
-                        </ul>
-                    </div>
-                <?php endif ?>
             </form>
+            <?php if($hasErrors): ?>
+                <div id="errors">
+                    <b> Errors found!</b>
+                </div>
+            <?php elseif(!$inNats): ?>
+                <div id="errors">
+                    <b><?= $root ?> is not a musical note!</b>
+                </div>
+            <?php endif ?>
         </section>
-
         <!-- TODO provide fail message -->
 
+
         <section id="piano-section">
-            <?php if (isset($_SESSION['piano'])): ?>
-                <b>highlighted</b><br>
-                <?php echo $_SESSION['piano'];  ?>
-            <?php endif; ?>
-            <!-- TODO define default behavior better -->
+            <?= $display_piano ?>
+        </section>
+
+        <section id="explanation">
+            <?= $explanation ?? '' ?>
         </section>
     </div>
 </body>
