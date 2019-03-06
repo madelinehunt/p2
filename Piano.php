@@ -134,18 +134,18 @@ class Piano
         $head = '<div id="piano">';
         $tail = '</div>';
         $raw_keys = [
-            'C-nat'=> '<div class="whitekey #REPLACEME" note="C-nat"></div>',
-            'C-sharp'=> '<div class="blackkey #REPLACEME" note="C-sharp"></div>',
-            'D-nat'=> '<div class="whitekey #REPLACEME" note="D-nat"></div>',
-            'D-sharp'=> '<div class="blackkey #REPLACEME" note="D-sharp"></div>',
-            'E-nat'=> '<div class="whitekey #REPLACEME" note="E-nat"></div>',
-            'F-nat'=> '<div class="whitekey #REPLACEME" note="F-nat"></div>',
-            'F-sharp'=> '<div class="blackkey #REPLACEME" note="F-sharp"></div>',
-            'G-nat'=> '<div class="whitekey #REPLACEME" note="G-nat"></div>',
-            'G-sharp'=> '<div class="blackkey #REPLACEME" note="G-sharp"></div>',
-            'A-nat'=> '<div class="whitekey #REPLACEME" note="A-nat"></div>',
-            'A-sharp'=> '<div class="blackkey #REPLACEME" note="A-sharp"></div>',
-            'B-nat'=> '<div class="whitekey #REPLACEME" note="B-nat"></div>',
+            'C-nat'=> '<div class="whitekey #REPLACEME" data-note="C-nat"></div>',
+            'C-sharp'=> '<div class="blackkey #REPLACEME" data-note="C-sharp"></div>',
+            'D-nat'=> '<div class="whitekey #REPLACEME" data-note="D-nat"></div>',
+            'D-sharp'=> '<div class="blackkey #REPLACEME" data-note="D-sharp"></div>',
+            'E-nat'=> '<div class="whitekey #REPLACEME" data-note="E-nat"></div>',
+            'F-nat'=> '<div class="whitekey #REPLACEME" data-note="F-nat"></div>',
+            'F-sharp'=> '<div class="blackkey #REPLACEME" data-note="F-sharp"></div>',
+            'G-nat'=> '<div class="whitekey #REPLACEME" data-note="G-nat"></div>',
+            'G-sharp'=> '<div class="blackkey #REPLACEME" data-note="G-sharp"></div>',
+            'A-nat'=> '<div class="whitekey #REPLACEME" data-note="A-nat"></div>',
+            'A-sharp'=> '<div class="blackkey #REPLACEME" data-note="A-sharp"></div>',
+            'B-nat'=> '<div class="whitekey #REPLACEME" data-note="B-nat"></div>',
         ];
         $final_keys = [];
 
