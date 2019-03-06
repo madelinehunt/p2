@@ -14,7 +14,7 @@ $inNats = true;
 $return = $_SESSION['returned'] ?? null;
 
 if (isset($return['piano'])) {
-    $completePiano = $_SESSION['returned']['piano'];
+    $completePiano = $return['piano'];
     $display_piano = $completePiano->builtPiano;
     $explanation = '<ul>
     <li><div class="whitekey highlighted-root"><b>Root note</b></br>'. $completePiano->root . '</div></li>
