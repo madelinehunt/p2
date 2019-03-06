@@ -13,16 +13,16 @@ require 'logic.php'
 </head>
 <body>
     <div id="roundrect-container">
-        <section id="intro">
+        <div id="intro">
             <h1 id="scales_title">🎵 Fun with Musical Scales 🎵</h1>
-        </section>
+        </div>
 
 
-        <section id="explanation">
+        <div id="explanation">
             <h4>Derive a musical scale here, and see it on the piano!  🎹</h4>
-        </section>
+        </div>
 
-        <section id="options">
+        <div id="options">
             <form action="./scales.php" method="get">
                 <label>
                     Root note: <input type="text" name="root" value="C" size="4" maxlength="1">
@@ -48,16 +48,16 @@ require 'logic.php'
                     <b><?= $root ?> is not a musical note!</b>
                 </div>
             <?php endif ?>
-        </section>
+        </div>
         <!-- TODO provide fail message -->
 
 
-        <section id="piano-section">
+        <div id="piano-div">
             <?= $display_piano ?>
-        </section>
+        </div>
 
-        <section id="explanation">
+        <div id="explain-notes">
             <?= $explanation ?? '' ?>
-        </section>
+        </div>
     </div>
 </body>
